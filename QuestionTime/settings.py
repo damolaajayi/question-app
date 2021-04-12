@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     'crispy_forms',
+    'webpack_loader',
 
     'allauth',
     'allauth.account',
@@ -142,6 +143,7 @@ LOGOUT_REDIRECT_URL = "/"
 
 STATIC_URL = '/static/'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -166,5 +168,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 2
+    'PAGE_SIZE': 4
+}
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json'),
+    }
 }

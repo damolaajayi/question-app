@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load render_bundle from webpack_loader %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuestionTime</title>
-</head>
+{% block content %}
+    <noscript>
+        <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable i
+      </noscript>
+      
+      <div id="app"></div>
 
-<body>
-    <h1>Vue JS</h1>
-
-    <div id="app"></div>
-</body>
-
-</html>
+    {% render_bundle 'app' %}
+{% endblock %}
