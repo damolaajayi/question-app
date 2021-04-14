@@ -1,5 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light my-navbar">
+  <nav
+    class="navbar fixed-top navbar-expand-sm navbar-light bg-light my-navbar"
+  >
     <div class="container">
       <router-link :to="{ name: 'Home' }" class="navbar-brand"
         >QuestionTime
@@ -19,7 +21,7 @@
             </router-link>
           </li>
           <li class="nav-item">
-            <a class="btn btn-sm btn-outline-secondary" href="/accounts/logout"
+            <a class="btn btn-sm btn-outline-secondary" href="/accounts/logout/"
               >Logout</a
             >
           </li>

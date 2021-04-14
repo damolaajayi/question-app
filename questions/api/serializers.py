@@ -7,6 +7,7 @@ class AnswerSerializer(serializers.ModelSerializer):
     created_at = serializers.SerializerMethodField()
     likes_count = serializers.SerializerMethodField()
     user_has_voted = serializers.SerializerMethodField()
+    question_slug = serializers.SerializerMethodField()
 
     class Meta:
         model = Answer
