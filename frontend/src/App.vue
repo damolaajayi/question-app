@@ -32,8 +32,7 @@ html,
 body {
   height: 100%;
   font-family: "Poppins", serif;
-  background-image: url("https://source.unsplash.com/5i0GnoTTjSE");
-  padding-top: 2rem;
+  background-color: grey;
 }
 
 .btn:focus {

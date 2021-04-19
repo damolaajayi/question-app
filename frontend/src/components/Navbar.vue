@@ -1,7 +1,5 @@
 <template>
-  <nav
-    class="navbar fixed-top navbar-expand-lg navbar-light bg-light my-navbar"
-  >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar">
     <div class="container">
       <router-link :to="{ name: 'Home' }" class="navbar-brand"
         >QuestionTime
