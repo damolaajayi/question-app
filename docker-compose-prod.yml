@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    #command: python /new/manage.py runserver 0.0.0.0:8000
+    command: gunicorn QuestionTime.wsgi -b 0.0.0.0:8000 # new
+    environment: 
+      - ENVIRONMENT=development
+      - SECRET_KEY=3az0#+5^rwc!pc@l@$$-3s6kel6!wzr1172l)tjpkrx212q_9pc
+      - DEBUG=0
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: postgres:11
+    environment: 
+      - POSTGRES_PASSWORD=postgres

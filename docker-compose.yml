@@ -3,12 +3,12 @@ version: '3.7'
 services:
   web:
     build: .
-    command: python /new/manage.py runserver 0.0.0.0:8000
- #   command: gunicorn QuestionTime.wsgi -b 0.0.0.0:8000
- #   environment: 
- #     - ENVIRONMENT=development
- #     - SECRET_KEY=!@iur(@nyzce7hx3dzf$$!9*d8(6mtqhnie-4lmm1uoyxudr3%p
- #     - DEBUG=1
+  #  command: python /new/manage.py runserver 0.0.0.0:8000
+    command: gunicorn QuestionTime.wsgi -b 0.0.0.0:8000
+    environment: 
+      - ENVIRONMENT=development
+      - SECRET_KEY=3az0#+5^rwc!pc@l@$$-3s6kel6!wzr1172l)tjpkrx212q_9pc
+      - DEBUG=1
     volumes:
       - .:/new
     ports:
