@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block style %}
 <style>
-    html, body {
+    html,
+    body {
         height: 100%;
         font-family: "Poppins", serif;
         background-image: url('https://source.unsplash.com/5i0GnoTTjSE');
@@ -28,6 +29,24 @@
 
     .outer-area {
         margin-top: 100px;
+    }
+
+    @media(max-width: 767px) {
+        .auth-box {
+            width: 300px;
+        }
+
+        .login-form-container {
+            width: 100px;
+        }
+
+        .registration-form-container {
+            width: 150px;
+        }
+
+        .outer-area {
+            margin-top: 50px;
+        }
     }
 </style>
 {% endblock %}
